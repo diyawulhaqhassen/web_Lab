@@ -1,0 +1,9 @@
+.jumbotron{
+    background-color: darkcyan;
+    color: wheat;
+    font-family: 'Inconsolata', monospace;
+}
+body{
+    font-family: 'Lora', serif;
+    background-color: #6dd6a9;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conference registration form </title>
+    <link rel="stylesheet" href="conference-style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap" rel="stylesheet">
+    </head>
+<body>
+<form>
+<label> Enter your name</label><input  name="user-name" required type="text" maxlength="70"><br>
+<label>Password</label><input required name="password" type="password"><br>
+<label>Email</label><input required name="email" type="email"><br>
+<p>Choose T-shirt size
+<select>
+    <option>Small</option>
+    <option>Medium</option>
+    <option>Large</option>
+</select></p>
+<br>Date of Birth?<input name="birth-date"  required type="date">
+<p> Receive Email?
+    <input  id="Send-email" name="email" type="radio" checked>
+    <label for="Send-email"> Yes</label>
+    <input id=" don't-send-email"name="email" type="radio">
+    <label for=" don't-send-email">No</label>
+
+</p>
+<p> Choose session
+    <input name="session" type="checkbox" >Morning
+    <input name="session" type="checkbox">Afternoon
+
+</p>
+
+<textarea name="text-area" rows="7" cols="70">text here</textarea>
+
+<br><input name="submit" type="submit">
+</form>
+</body>
+</html>

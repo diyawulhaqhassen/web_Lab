@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id ="mouse-me"> Move the mouse here</p>
+
+<script>
+let  mouseCount=0
+let  message =document.querySelector('#mouse-me')
+
+message.addEventListener('mouseover',function () {
+    message.innerHTML=' your mouse is on this message'
+})
+message.addEventListener('mouseout',function () {
+    message.innerHTML = 'your mouse is NOT on this message'
+})
+</script>
+
+</body>
+</html>

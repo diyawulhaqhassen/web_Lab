@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite program</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Zilla+Slab#standard-styles" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="favorite_program.css" type="text/css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="jumbotron">
+    <h1>Garden Invoice</h1>
+</div>
+<P>Garden invoice program generate invoice.<br>
+    The invoices  have the following information:<br>
+    <ul>
+    <li>The customer name</li>
+    <li> Address</li>
+    <li>Date of service</li>
+    <li>The size of the garden</li>
+    <li> The mowing charge</li>
+    <li> The leaf raking charge</li>
+    <li>The total for all services</li>
+    <li> Contact information for the gardener</li>
+   </ul>
+    The following are sample code
+</P>
+<pre><code>    public static boolean writeToFile(String filename, String text) {
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(INVOICE_DIRECTORY, filename)))) {
+            writer.write(text);
+            writer.close();
+            return true;
+
+        } catch (IOException e) {
+            System.out.println("Unable to write to file " + filename + ". Error message:\n" + e.getMessage());
+            return false;
+        }
+    }  </code></pre>
+<label> for more information <a href="https://github.com/mctc-itec/lab-8-intro-to-guis-diyawulhaqhassen/commit/e567f0320fa675d36a36eaeafee8e564e141dc83"> click here</a> to see the full code in git hub </label>
+
+<img src="Garden_sample_code.png" alt="sample code from garden invoice program">
+
+</body>
+</html>

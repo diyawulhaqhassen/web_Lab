@@ -1,0 +1,84 @@
+p{
+ color: blue;
+ font-size: 25px;
+}
+h1{
+ color: olive;
+ font-size: 48px;
+ text-align: center;
+}
+.section-header{
+  font-size: 39px;
+}
+h2{
+ font-size: 35px;
+ color: olive;
+}
+body{
+ background-color: OldLace;
+ font-family: Georgia,'Times New Roman',Times, Serif  ;
+}
+li{
+ list-style-type: square;
+
+}
+a{
+ background-color: lightgreen;
+ color: darkred;
+ text-decoration: none;
+}
+ul{
+ font-size: 25px;
+ color: blue;
+ background-color: darkkhaki;
+}
+#most-favorite{
+ background-color: lightgreen;
+}
+.second-favorite{
+ background-color: orange;
+}
+#page-title{
+ text-shadow: 4px 4px magenta;
+;
+}
+
+.favorite-section{
+ background-color: lightgreen;
+ border: 3px #6d8b00 dashed;
+ margin: 10px;
+ padding: 10px;
+}
+#favorite-movie-title{
+ font-style: italic;
+}
+#favorite-music-name{
+  background-color: darkkhaki;
+ }
+#most-favorite-food{
+ font-style:oblique;
+}
+.favorite-image{
+ border-radius: 50%;
+}
+table,th,td{
+ border: 1px solid black;
+ border-collapse: collapse ;
+
+}
+table {
+ width: 100%;
+}
+
+th {
+ height: 40px;
+ font-size: 20px;
+ background-color: darkkhaki;
+ color: darkred;
+
+}
+td{
+ text-align: center;
+ height: 30px;
+ color: #d03652;
+}

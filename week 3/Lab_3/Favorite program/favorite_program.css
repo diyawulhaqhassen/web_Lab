@@ -1,0 +1,15 @@
+.jumbotron{
+    background-color: orange;
+    color: blue;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+
+}
+body{
+    margin-left: 30px;
+    font-family: Zilla slab ;
+    font-size: 30px;
+}
+pre{
+    font-size: 20px;
+}

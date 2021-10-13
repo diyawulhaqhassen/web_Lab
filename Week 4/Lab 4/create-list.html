@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+
+<input  id=input-text type="text">
+<button id="add-button"> Add</button>
+
+<ul id="added-list">
+
+</ul>
+<button id="clear">Clear</button>
+</body>
+
+<script>
+ let maxList=10
+ let addedListItem=0
+
+ let inputText =document.querySelector('#input-text')
+
+ let addButton =document.querySelector("#add-button")
+ let  addedList=document.querySelector('#added-list')
+ let clearButton=document.querySelector('#clear')
+
+ addButton.addEventListener("click",function () {
+     if(addedListItem>=maxList){
+         alert('Sorry you reached the maximum item')
+     }
+     let newText = inputText.value
+     if (newText.length>=50){
+         alert('The text is too long')
+         return
+     }
+     if (newText.length<1){
+         return
+     }
+
+
+     console.log(newText)// read the text in the input
+     let listItem = document.createElement('li')
+     listItem.innerHTML = newText
+     addedList.appendChild(listItem)
+     inputText.value =''
+     addedListItem++
+ })
+
+ clearButton.addEventListener('click',function () {
+ addedList.innerHTML=''
+     addedListItem=0
+
+ })
+</script>
+</html>
