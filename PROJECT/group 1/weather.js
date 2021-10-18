@@ -1,4 +1,9 @@
-let weatherAPIUrl='https://api.weather.gov/gridpoints/MPX/116,72/forecast'
+let weatherApiUrl='https://api.weather.gov/gridpoints/MPX/116,72/forecast'
 
 
-fetch(weatherAPIUrl).then(rejh)
+fetch(weatherApiUrl)
+    .then(response => response.json())
+    .then((weatherJson)=>{
+        console.log(weatherJson)
+    let periodsArray=weatherJson.properties.periods
+})

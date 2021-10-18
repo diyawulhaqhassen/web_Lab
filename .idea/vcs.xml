@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Week 4/week3-examples" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/week 5(Jason)" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/week 5(Jason)/example" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../Web_Client_week_1/Lab2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>
