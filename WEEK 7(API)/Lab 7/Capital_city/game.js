@@ -16,12 +16,12 @@ resultTextElement.innerHTML=''
 // TODO when the page loads, select an element at random from the countriesAndCodes array
 let randomCountryNumber = Math.floor(Math.random() * countriesAndCodes.length);// select random element
 
-
+console.log(randomCountryNumber)
 
 // TODO display the country's name in the randomCountryElement 
 let randomCountry=countriesAndCodes[randomCountryNumber]
 randomCountryElement.innerHTML=randomCountry.name
-//document.getElementById('#ra')
+
 
 // TODO add a click event handler to the submitButton.  When the user clicks the button,
 submitButton.addEventListener('click',function (){
