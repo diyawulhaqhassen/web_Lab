@@ -43,11 +43,4 @@ submitAnswerElement.addEventListener('click',function() {
 //     randomFlagElement.innerHTML=randomState.state_flag_url
 // })
 
-//
-// function generateRandomFlag(array){
-//     let randomNum=Math.floor(Math.random()*array.length)
-//    image.setAttribute('src',array[randomNum])
 
-    // let randomStateFlag=statesData[randomState.state_flag_url]
-
-  // randomFlagElement.setAttribute('src',statesData[randomStateFlag])
