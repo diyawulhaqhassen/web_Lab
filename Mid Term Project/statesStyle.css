@@ -1,4 +1,37 @@
 #random-flag img{
-    width: 600px;
+    width: 400px;
     height: auto;
+}
+body {
+    background-color: #6dd6a9;
+    color: #d03652;
+    font-family: 'Lora', serif;
+    padding-left: 10px
+}
+#question{
+    font-size: 28px;
+}
+.button{background-color: #008CBA;
+    font-size: 16px;
+    padding: 12px 20px;}
+input[type=text] {
+    width: 40%;
+    padding: 10px 20px;
+    margin: 8px ;
+    box-sizing: border-box;
+    font-size: 20px;
+    height: 30px;
+}
+.jumbotron{
+
+    background-color: darkcyan;
+    color: wheat;
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+
+
+}
+#score{
+   // padding-left: 60px;
+    margin-left: 1500px;
 }
