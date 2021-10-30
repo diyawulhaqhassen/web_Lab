@@ -7,6 +7,7 @@ body {
     color: #d03652;
     font-family: 'Lora', serif;
     padding-left: 10px
+
 }
 #question{
     font-size: 28px;
@@ -23,15 +24,16 @@ input[type=text] {
     height: 30px;
 }
 .jumbotron{
-
+    text-align: center;
     background-color: darkcyan;
     color: wheat;
     font-family: 'Inconsolata', monospace;
     font-size: 40px;
+    width: 800px;
 
 
 }
 #score{
    // padding-left: 60px;
-    margin-left: 1500px;
+    text-align: left;
 }
