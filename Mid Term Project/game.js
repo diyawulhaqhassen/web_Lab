@@ -102,13 +102,10 @@ function getState() {// create a function to get states
                         }
                     }else {// if the question ends print the total result
                         userResult.innerHTML=` Your result is ${correctAnswer} /${randomStatesList.length}`
-                        //let passFail=document.createElement('p');
                         if (correctAnswer>randomStatesList.length/2){
-                            //passFail.document.createElement('p')
                             let passFail=document.createElement('p');
                            userPassFail.innerHTML='Pass, Congratulation'.fontcolor('green')
                         }else {
-                            let passFail=document.createElement('p');
                             userPassFail.innerHTML='Fail, Try a gain'.fontcolor('red')
                         }
                     }
@@ -122,7 +119,7 @@ function getState() {// create a function to get states
                     answer=''
                     userAnswerElement.value=''
                     randomFlagElement.removeChild(flagImage)
-                    userPassFail=''
+                    userPassFail.innerHTML=''
 
 
 
