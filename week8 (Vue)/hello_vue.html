@@ -13,6 +13,7 @@
     <h1>Hello Vue</h1>
 
     <p>{{message}}</p>
+    <p>{{messageWithExclamationPoints}}</p>
     <button v-on:click="addExclamation">Add !</button>
     <button v-on:click="clearExclamation">Clear Exclamation Points</button>
 
@@ -34,15 +35,24 @@
                 if (this.exclamationPoints<this.maxExclamationPoints) {
                     this.exclamationPoints++
 
-                    this.message = this.message + '!'
+                   // this.message = this.message + '!'
                 }else {
                     alert('No more exclamation Points')
                 }
             },
-            clearExclamation(){
+            clear(){
                 this.message='hi'
                 this.exclamationPoints=0
 
+            },
+            computed:{
+                messageWithExclamationPoints(){
+                    let messageWithPoints=this.message
+                    for (let x=0; x<this.exclamationPoints; x++){
+                        messageWithPoints=messageWithPoints+'!'
+                    }
+                    return messageWithPoints
+                }
             }
         }
     })
