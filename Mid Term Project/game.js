@@ -2,10 +2,10 @@ let randomFlagElement=document.querySelector('#random-flag')// get random flag b
 let userAnswerElement=document.querySelector('#user-answer') // get user answer element by id
 let submitAnswerElement=document.querySelector('#submit-answer')// get submit  user answer
 let userResult=document.querySelector('#result')// get user result by ID
-let playAgainButton=document.querySelector('#play-again')// get play again button by id
+let userPassFail=document.querySelector('#passFail')
+let tryAgainButton=document.querySelector('#play-again')// get play again button by id
 //let image=document.querySelector('img')// get image
 let questionCounterElement=document.querySelector('#number-of-question')//
-let userScore=document.querySelector('#score')
 let userQuestion=document.querySelector('#question')
 let nextButton=document.querySelector('#next')
 let answer=userAnswerElement.value// get the value of the user answer
@@ -43,77 +43,90 @@ function getState() {// create a function to get states
                 submitAnswerElement.addEventListener('click', function () {// add listener for flag image
                     console.log(randomStatesList[stateListIndex])
                     console.log(answer.length)
-                    if(answer.length===0){// if the user is not answer a question
+                    answer=userAnswerElement.value// get the value of the user answer
+                    if (answer.length === 0) {// if the user is not answer a question alert pop up
                         alert('Pleas answer the question')
-                    }else {
-                        let randomState = randomStatesList[stateListIndex]
+                    } else {// otherwise check the answer is correct or not
+                        let selectedState = randomStatesList[stateListIndex]
 
-                        if (answer.toLowerCase() === randomState.toLowerCase()) {
+                        if (answer.toLowerCase() === selectedState.toLowerCase()) {// if the answer is correct
                             userResult.innerHTML = `Your answer is correct `.fontcolor('green')
                             correctAnswer++
-                            userScore.innerHTML = (correctAnswer) + " / " + randomStatesList.length;
+                           // userScore.innerHTML = (correctAnswer) + " / " + randomStatesList.length;
 
-                        } else {
-                            userResult.innerHTML = `Your answer is wrong the correct answer is ${randomState} `.fontcolor('red')
+                        } else {// other wise print the following
+                            userResult.innerHTML = `Your answer is wrong the correct answer is ${selectedState} `.fontcolor('red')
 
                         }
                     }
                 })
 
-                nextButton.addEventListener('click',function () {
-                    let answer = userAnswerElement.value
+                nextButton.addEventListener('click',function () {// add next button event listener
+                    answer = userAnswerElement.value// get the user answer value
 
 
-
-                    if(stateListIndex>randomStatesList.length){
+                // show the number of question
+                    if(stateListIndex>randomStatesList.length){// if the sate list index greater than the state list length
                         stateListIndex=randomStatesList.length
                         questionCounterElement.innerHTML = `Question ${stateListIndex } of ${randomStatesList.length}`
                     }else {
                         questionCounterElement.innerHTML = `Question ${stateListIndex + 1} of ${randomStatesList.length}`
                     }
-                    stateListIndex++
-                    let randomState = randomStatesList[stateListIndex]
+                    stateListIndex++// state list index increment by 1
+                    let randomState = randomStatesList[stateListIndex]// assign random state
                     console.log(randomState)
                     console.log(stateListIndex)
                     console.log(correctAnswer)
 
                     let stateInfoUrl = `https://state-info.herokuapp.com/api/info/${randomState}`
 
-                    if (randomStatesList.length > stateListIndex) {
+                    if (randomStatesList.length > stateListIndex) {// if the state list length greater than the list index
 
-                        if (!answer) {
+                        if (!answer) {// uf the user didn't answer alert the following message
                             alert('Pleas answer the question ')
-                        } else {
+                        } else { //otherwise fetch the next flag image
 
 
 
                             fetch(stateInfoUrl).then(response2 => response2.json()).then(statesDetail => {
 
 
-                                flagImage.src = statesDetail.state_flag_url
+                                flagImage.src = statesDetail.state_flag_url// get the flag image
 
-                                randomFlagElement.src = flagImage
-                                userResult.innerHTML = ''
-                                userAnswerElement.value = ''
+                                randomFlagElement.src = flagImage// assign random flag image with the next flag
+                                userResult.innerHTML = ''// clear the user result string
+                                userAnswerElement.value = ''// clear the user answer
 
 
                             })
                         }
-                    }else {
+                    }else {// if the question ends print the total result
                         userResult.innerHTML=` Your result is ${correctAnswer} /${randomStatesList.length}`
+                        //let passFail=document.createElement('p');
+                        if (correctAnswer>randomStatesList.length/2){
+                            //passFail.document.createElement('p')
+                            let passFail=document.createElement('p');
+                           userPassFail.innerHTML='Pass, Congratulation'.fontcolor('green')
+                        }else {
+                            let passFail=document.createElement('p');
+                            userPassFail.innerHTML='Fail, Try a gain'.fontcolor('red')
+                        }
                     }
 
                 })
 
-                playAgainButton.addEventListener('click',function (){
+                tryAgainButton.addEventListener('click',function (){// play again
+
+                   //clear all and start a gain
                     userResult.innerHTML=''
                     answer=''
                     userAnswerElement.value=''
                     randomFlagElement.removeChild(flagImage)
+                    userPassFail=''
 
 
 
-                    getState()
+                    getState()// call get state function
 
 
                 })
@@ -141,13 +154,6 @@ function getState() {// create a function to get states
 
 
 
-getState()
-
-//getState()
+getState()// call get state function
 
 
-
-
-
-
-//https://state-info.herokuapp.com/api/info/Alaska
