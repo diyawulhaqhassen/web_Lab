@@ -4,13 +4,13 @@ let submitAnswerElement=document.querySelector('#submit-answer')// get submit  u
 let userResult=document.querySelector('#result')// get user result by ID
 let userPassFail=document.querySelector('#passFail')
 let tryAgainButton=document.querySelector('#play-again')// get play again button by id
-//let image=document.querySelector('img')// get image
+
 let questionCounterElement=document.querySelector('#number-of-question')//
 let userQuestion=document.querySelector('#question')
 let nextButton=document.querySelector('#next')
 let answer=userAnswerElement.value// get the value of the user answer
 
-let correctAnswer = 0// asign variable for correct answer
+let correctAnswer = 0// assign variable for correct answer
 
 
 //let url1 ='https://github.com/CivilServiceUSA/us-states/blob/master/data/states.json'
@@ -131,20 +131,6 @@ function getState() {// create a function to get states
 
                 })
                 })
-
-
-
-
-
-
-//
-//
-//
-//     })
-//
-//
-// })
-
 
     })
 

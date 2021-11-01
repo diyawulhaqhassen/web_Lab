@@ -16,7 +16,7 @@ body {
     font-size: 16px;
     padding: 12px 20px;}
 input[type=text] {
-    width: 40%;
+    width: 30%;
     padding: 10px 20px;
     margin: 8px ;
     box-sizing: border-box;
@@ -29,11 +29,11 @@ input[type=text] {
     color: wheat;
     font-family: 'Inconsolata', monospace;
     font-size: 40px;
-    width: 800px;
+    width: auto;
 
 
 }
 #score{
-   // padding-left: 60px;
+   padding-left: 60px;
     text-align: left;
 }
