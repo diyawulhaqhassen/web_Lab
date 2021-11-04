@@ -15,7 +15,7 @@
     <p>{{message}}</p>
     <p>{{messageWithExclamationPoints}}</p>
     <button v-on:click="addExclamation">Add !</button>
-    <button v-on:click="clearExclamation">Clear Exclamation Points</button>
+    <button v-on:click="clear">Clear Exclamation Points</button>
 
 
 </div>
@@ -40,10 +40,10 @@
                     alert('No more exclamation Points')
                 }
             },
-            clear(){
-                this.message='hi'
-                this.exclamationPoints=0
-
+            clear() {
+                //this.message='hi'
+                this.exclamationPoints = 0
+            }
             },
             computed:{
                 messageWithExclamationPoints(){
@@ -54,7 +54,7 @@
                     return messageWithPoints
                 }
             }
-        }
+
     })
     app.mount('#app')
 </script>
