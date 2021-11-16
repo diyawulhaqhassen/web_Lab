@@ -15,7 +15,7 @@
           <td>{{student.name}}</td>
           <td>{{student.starID}}</td>
           <td>
-            <input type="checkbox" v-model="student.present" v-on:change="arriveOrLeft(student)">
+            <input type="checkbox" v-bind:checked="student.present" v-on:change="arrivedOrLeft(student,$event.target.checked)">
           </td>
 
 
@@ -23,7 +23,11 @@
         <!-- TODO create table rows
         Each row will have a checkbox, bound to the app's data
         When the checkbox is checked/unchecked, the student will be signed in/out -->
+        <student-row v-for="student in students"
+        v-bind:student="student" v-bind:key="student.starID"
+        v-on:student-arrived-or-left="arrivedOrLeft">
 
+        </student-row>
       </table>
     </div>
   </div>
@@ -31,19 +35,30 @@
 </template>
 
 <script>
+import StudentRow from "@/components/StudentRow";
 export default {
   name: "StudentTable",
+
+  components: {StudentRow},
+  emits:['student-arrived-or-left'],
   props:{
     students:Array
   },
  methods: {
-    arrivedOrLeft(student){
-
+    arrivedOrLeft(student,present){
+    this.$emit('student-arrived-or-left',student,present)
     }
 }
 }
 </script>
 
 <style scoped>
-
+.present{
+  color: gray;
+  font-style: italic;
+}
+.absent{
+  color: black;
+  font-weight: bold;
+}
 </style>
