@@ -51,7 +51,7 @@ export default {
   },
  methods: {
     arrivedOrLeft(student,present){
-    this.$emit('student-arrived-or-left',student,present)
+    this.$emit('student-present',student,present)
     },studentDeleted(){
       this.$emit('delete-student',this.student)// delete student
    }
